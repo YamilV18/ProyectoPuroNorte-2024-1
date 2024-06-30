@@ -20,10 +20,11 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        Product::factory(10)->create();
+        //Product::factory(10)->create();
         $this->call(PermissionSeeder::class);
         $this->call(RoleSeeder::class);
         $this->call(TableSeeder::class);
+        $this->call(ProductSeeder::class);
         $this->call(UserSeeder::class);
     }
 }
