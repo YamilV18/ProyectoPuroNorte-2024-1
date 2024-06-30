@@ -13,13 +13,11 @@ class PermissionSeeder extends Seeder
      */
     public function run(): void
     {
-        Permission::create([
-            'name' => 'Ver dashboard',
-            'guard_name' => 'web'
-        ]);
 
-        // Permisos para web y api
+        // Permisos para web y api (según la configuración de auth.php)
         $permissions = [
+            'Ver dashboard',
+
             'Listar usuario',
             'Crear usuario',
             'Editar usuario',
@@ -48,12 +46,7 @@ class PermissionSeeder extends Seeder
 
         foreach ($permissions as $permission) {
             Permission::create([
-                'name' => $permission,
-                'guard_name' => 'web'
-            ]);
-            Permission::create([
-                'name' => $permission,
-                'guard_name' => 'api'
+                'name' => $permission
             ]);
         }
     }

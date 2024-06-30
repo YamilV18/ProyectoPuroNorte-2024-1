@@ -75,8 +75,8 @@ class RoleSeeder extends Seeder
                 }
             }
 
-            // Asignar permisos al guard api (excepto 'Ver dashboard')
-            foreach (array_diff($perms, ['Ver dashboard']) as $perm) {
+            // Asignar permisos al guard api
+            foreach ($perms as $perm) {
                 $permission = Permission::where('name', $perm)->where('guard_name', 'api')->first();
                 if ($permission) {
                     $roleApi->givePermissionTo($permission);
