@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\MesasMain;
+use App\Livewire\OrderMain;
 use App\Livewire\PostLivewire;
 use Illuminate\Support\Facades\Route;
 
@@ -29,4 +30,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
     Route::get('/mesas',MesasMain::class)->name('mesas');
+    Route::get('/pedidos',OrderMain::class)->name('order');
 });

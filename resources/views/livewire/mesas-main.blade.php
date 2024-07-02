@@ -11,7 +11,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
             <div class="flex items-center justify-between dark:text-gray-400 gap-4 mb-2">
-                <input icon="search" placeholder="Buscar registro" wire:model.live="search"/>
+
                 <x-button wire:click="create()" spinner="create" icon="plus" primary label="Nuevo"/>
                     @if($isOpen)
                         @include('livewire.mesas-create')
