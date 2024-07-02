@@ -6,7 +6,7 @@ use App\Livewire\Forms\MesasForm;
 use App\Models\Table;
 use Livewire\Component;
 use Livewire\WithPagination;
-use WireUi\Traits\WireUiActions;
+use WireUi\Traits\Actions;
 
 class MesasMain extends Component
 {
@@ -17,7 +17,7 @@ class MesasMain extends Component
     }
 
     use WithPagination;
-    use WireUiActions;
+    use Actions;
     public $isOpen=false;
     //public $position_id;
     public ?Table $table;

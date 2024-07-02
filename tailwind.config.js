@@ -15,10 +15,9 @@ export default {
         './resources/views/**/*.blade.php',
         "./src/**/*.{html,js}",
         "./node_modules/tw-elements/js/**/*.js",
-        "./vendor/wireui/wireui/src/*.php",
-        "./vendor/wireui/wireui/ts/**/*.ts",
-        "./vendor/wireui/wireui/src/WireUi/**/*.php",
-        "./vendor/wireui/wireui/src/Components/**/*.php"
+        './vendor/wireui/wireui/resources/**/*.blade.php',
+        './vendor/wireui/wireui/ts/**/*.ts',
+        './vendor/wireui/wireui/src/View/**/*.php'
 
     ],
     plugins: [require("tw-elements/plugin.cjs")],

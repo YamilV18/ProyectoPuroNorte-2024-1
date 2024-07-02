@@ -28,12 +28,9 @@
                             <h2>Aforo: {{ $mesa->aforo }}</h2>
                         </div>
                         <div class="grid grid-cols-2 gap-4 py-1">
-                            <button class="bg-red-500 text-white font-semibold py-1 px-3 rounded" wire:click="destroy({{$mesa}})">
-                                Borrar
-                            </button>
-                            <button class="bg-blue-500 text-white font-semibold py-1 px-3 rounded" wire:click="edit({{$mesa}})">
-                                Editar
-                            </button>
+
+                            <x-button.circle wire:click="edit({{$mesa}})" primary icon="pencil" />
+                            <x-button.circle wire:click="destroy({{$mesa}})" negative icon="x" />
                         </div>
                     </div>
 

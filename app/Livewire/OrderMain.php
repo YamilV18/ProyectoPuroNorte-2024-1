@@ -7,7 +7,7 @@ use App\Models\Order;
 use App\Models\Table;
 use Livewire\Component;
 use Livewire\WithPagination;
-use WireUi\Traits\WireUiActions;
+use WireUi\Traits\Actions;
 
 class OrderMain extends Component
 {
@@ -20,7 +20,7 @@ class OrderMain extends Component
     }
 
     use WithPagination;
-    use WireUiActions;
+    use Actions;
     public $isOpen=false;
     public $position_id;
     public ?Order $order;

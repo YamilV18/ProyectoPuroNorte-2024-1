@@ -37,12 +37,8 @@
                   <td class="px-6 py-4 dark:text-gray-200">{{$item->table->numero}}</td>
 
                   <td class="px-6 py-4 text-right">
-                    <button class="bg-red-500 text-white font-semibold py-1 px-3 rounded" wire:click="destroy({{$item}})">
-                        Borrar
-                    </button>
-                    <button class="bg-blue-500 text-white font-semibold py-1 px-3 rounded" wire:click="edit({{$item}})">
-                        Editar
-                    </button>
+                    <x-button.circle wire:click="destroy({{$item}})" negative icon="x" />
+                    <x-button.circle wire:click="edit({{$item}})" primary icon="pencil" />
 
 
                   </td>
