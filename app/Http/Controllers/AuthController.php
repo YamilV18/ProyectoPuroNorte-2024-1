@@ -50,7 +50,15 @@ class AuthController extends Controller
             return response()->json(['error' => 'Could not create token'], 500);
         }
 
-        return response()->json(compact('token'));
+        // Add token type and expiration time to the response
+        $token_type = 'bearer';
+        $expires_in = JWTAuth::factory()->getTTL() * 60; // Default is 60 minutes
+
+        return response()->json([
+            'access_token' => $token,
+            'token_type' => $token_type,
+            'expires_in' => $expires_in
+        ]);
     }
 
     // Cierre de sesión de usuario

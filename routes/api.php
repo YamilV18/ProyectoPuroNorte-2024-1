@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuditController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\OrderController;
@@ -65,4 +66,12 @@ Route::group(['middleware' => ['jwt.auth']], function () {
     Route::put('collections/{collection}',[CollectionController::class,'update'])->middleware('jwt.permission:Editar Cobranza');
     Route::get('collections/{collection}',[CollectionController::class,'show'])->middleware('jwt.permission:Listar Cobranza');
     Route::delete('collections/{collection}',[CollectionController::class,'destroy'])->middleware('jwt.permission:Eliminar Cobranza');
+    //Auditoría
+    Route::get('audit',[AuditController::class,'index'])->middleware('jwt.permission:Listar usuario');
+    Route::post('audit',[AuditController::class,'store'])->middleware('jwt.permission:Crear usuario');
+    Route::put('audit/{audit}',[AuditController::class,'update'])->middleware('jwt.permission:Editar usuario');
+    Route::get('audit/{audit}',[AuditController::class,'show'])->middleware('jwt.permission:Listar usuario');
+    Route::delete('audit/{audit}',[AuditController::class,'destroy'])->middleware('jwt.permission:Eliminar usuario');
+
 });
+
