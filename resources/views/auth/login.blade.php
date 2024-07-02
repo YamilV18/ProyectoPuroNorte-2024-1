@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="mt-12 flex justify-center items-center">
-                    <x-button
+                    <x-button type="submit"
                         class="shadow-xl py-2.5 px-4 text-sm tracking-wide rounded-md text-white bg-black hover:bg-orange-700 focus:outline-none text-center">
                             {{ __('Log in') }}
                     </x-button>
