@@ -36,6 +36,8 @@
                   <a href="/" class="text-white md:font-bold hover:bg-orange-700 rounded-md px-3 py-2 text-sm font-medium" aria-current="page">INICIO</a>
                   <a href="/producto" class="text-white md:font-bold hover:bg-orange-700  hover:text-white rounded-md px-3 py-2 text-sm font-medium">PRODUCTOS</a>
                   <a href=""class="text-white md:font-bold hover:bg-orange-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">PROMOCIONES</a>
+                  <a href="/mesas"class="text-white md:font-bold hover:bg-orange-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">MESAS</a>
+                  <a href="/pedidos"class="text-white md:font-bold hover:bg-orange-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">PEDIDOS</a>
                 </div>
               </div>
             </div>
