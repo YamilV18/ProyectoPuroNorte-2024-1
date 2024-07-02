@@ -1,5 +1,8 @@
 <?php
 
+use App\Livewire\IndexLivewire;
+use App\Livewire\ProductLivewire;
+use App\Livewire\ProductMain;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+ Route::get('/', function () {
+     return view('welcome');
+ });
+//Route::get('/',[PostLivewire::class,'render'])->name('index');
 
 Route::middleware([
     'auth:sanctum',
@@ -25,4 +29,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/producto',ProductMain::class)->name('producto');
 });
+// Route::get('/',[IndexLivewire::class,'render'])->name('index');
+Route::get('/carta',ProductLivewire::class)->name('carta');
