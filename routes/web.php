@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\MesasMain;
 use App\Livewire\PostLivewire;
 use Illuminate\Support\Facades\Route;
 
@@ -27,4 +28,5 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/mesas',MesasMain::class)->name('mesas');
 });
